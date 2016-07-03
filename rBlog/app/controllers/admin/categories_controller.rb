@@ -10,7 +10,7 @@ class Admin::CategoriesController < Admin::ApplicationController
       flash[:notice] = "Category Created"
       redirect_to admin_categories_path
     else
-      render_to admin_categories_path
+      render "new"
     end
   end
 
@@ -40,9 +40,6 @@ class Admin::CategoriesController < Admin::ApplicationController
 
   def index
     @categories = Category.all
-  end
-
-  def show
   end
 
   private
